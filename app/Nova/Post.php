@@ -2,7 +2,8 @@
 
 namespace App\Nova;
 
-use Acme\Checkboxes\Checkboxes;
+//use Acme\Checkboxes\Checkboxes;
+use App\Nova\Filters\StatusType;
 use Beyondcode\Rating\Rating;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
@@ -85,7 +86,10 @@ class Post extends Resource
     public function filters(Request $request)
     {
         return [
-            new Checkboxes()
+//            new Checkboxes(),
+        new StatusType()
+
+
         ];
     }
 
